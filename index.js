@@ -2,9 +2,7 @@ const axios = require("axios");
 
 async function reqesetAxios() {
   try {
-    const response = await axios
-      .get("https://ifconfig.co/json")
-      .then((response) => response.data);
+    const { data: response } = await axios.get("https://ifconfig.co/json");
     console.log(response);
   } catch (err) {
     console.error(err);
